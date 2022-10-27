@@ -1,0 +1,8 @@
+#the-report
+
+
+SELECT IF(students.marks<70,NULL,students.name),grades.grade,students.marks FROM students
+
+LEFT JOIN grades on students.marks BETWEEN Grades.min_mark AND grades.max_mark 
+
+ORDER BY grades.grade DESC,students.name
